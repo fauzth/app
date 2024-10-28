@@ -1,0 +1,502 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home4"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Bagian Header dengan Foto Profil dan Nama -->
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle_shape_white"
+                    android:src="@drawable/nji"
+                    android:scaleType="centerCrop"
+                    android:clipToOutline="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/profileImage"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/greetingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello, Welcome!"
+                        android:textColor="#808080"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/inter"/>
+
+                    <TextView
+                        android:id="@+id/userNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fadli Fauzi"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/inter2"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Upcoming Info Banner -->
+            <View
+                android:id="@+id/infoBanner"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/headerLayout"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/baner0" />
+
+            <!-- Ikon Menu -->
+            <LinearLayout
+                android:id="@+id/menuIcons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoBanner"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <!-- Item 1: Gambar dan Teks -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/schedule" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jadwal"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/inter"/>
+                </LinearLayout>
+
+                <!-- Item 2: Gambar dan Teks -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/live" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Live"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/inter"/>
+                </LinearLayout>
+
+                <!-- Item 3: Gambar dan Teks -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/diskusi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diskusi"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/inter"/>
+                </LinearLayout>
+
+                <!-- Item 4: Gambar dan Teks -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/dosen" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dosen"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/inter"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Banner Beasiswa & Magang -->
+
+            <RelativeLayout
+                android:id="@+id/scholarshipLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/menuIcons"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/inter2"
+                    android:text="Beasiswa Dan Magang" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/internship" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/scholarship"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="20dp"/>
+            </RelativeLayout>
+
+            <!-- Daftar Course -->
+            <RelativeLayout
+                android:id="@+id/courseListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@id/scholarshipLayout"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Course List"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/inter2" />
+
+                <!--grid 1-->
+                <GridLayout
+                    android:id="@+id/courseGrid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:columnCount="3"
+                    android:padding="16dp">
+
+                    <!-- Course 1 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/triantena"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="10dp"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize16"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="Perancangan Antenna"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+
+                    <!-- Course 2 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/twoenglish"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="Bahasa Inggris"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+
+                    <!-- Course 3 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/fourkomdat"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="Komunikasi Data"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <!--grid 2-->
+                <GridLayout
+                    android:id="@+id/courseGrid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:columnCount="3"
+                    android:padding="16dp">
+
+                    <!-- Course 1 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/fourpp"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="Protocol Persinyalan"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+
+                    <!-- Course 2 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/fourpsd"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="Pengolahan Sinyal Digital"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+
+                    <!-- Course 3 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/fourskso"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="Sistem Komunikasi Serat Optik"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+                </GridLayout>
+
+                <!--grid 3-->
+                <GridLayout
+                    android:id="@+id/courseGrid3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="260dp"
+                    android:columnCount="3"
+                    android:padding="16dp">
+
+                    <!-- Course 1 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/foursmikon"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="Sistem Mikrokontroler"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+
+                    <!-- Course 2 -->
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:layout_marginRight="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:src="@drawable/fourweb"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Course 1 Image"
+                            android:background="#FFFFFF"
+                            app:cornerRadius="10dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="Pemrograman Website"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="8dp"
+                            android:fontFamily="@font/inter2" />
+                    </LinearLayout>
+                </GridLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bottomnav"
+        android:gravity="center">
+
+        <!-- Ikon navigasi di sini -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/downloadBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_file_download_24"
+            android:layout_marginStart="50dp"/>
+
+        <ImageView
+            android:id="@+id/aboutUs"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_group_24"
+            android:layout_marginStart="50dp"/>
+
+        <ImageView
+            android:id="@+id/listGrade"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_format_list_bulleted_24"
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+</RelativeLayout>

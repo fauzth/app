@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:id="@+id/register"
+    android:background="#EFF1F9">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+        android:contentDescription="Back" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:text="Hello, Register To \nGet Started"
+        android:textSize="30sp"
+        android:textColor="#000"
+        android:fontFamily="@font/inter2"/>
+
+    <!-- Username Input -->
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/username"
+        android:hint="Enter Your Username"
+        android:padding="12dp"
+        android:paddingStart="30dp"
+        android:fontFamily="@font/inter"/>
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/usernameInput"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="45dp"
+        android:hint="Enter Your Password"
+        android:background="@drawable/username"
+        android:padding="12dp"
+        android:inputType="textPassword"
+        android:paddingStart="30dp"
+        android:fontFamily="@font/inter"/>
+
+    <EditText
+        android:id="@+id/phoneInput"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/passwordInput"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/username"
+        android:hint="Enter Your Phone Number"
+        android:padding="12dp"
+        android:paddingStart="30dp"
+        android:fontFamily="@font/inter"/>
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/phoneInput"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/username"
+        android:hint="Enter Your Email"
+        android:padding="12dp"
+        android:paddingStart="30dp"
+        android:fontFamily="@font/inter"/>
+
+    <!-- Forgot Password -->
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/passwordInput"
+        android:layout_below="@id/emailInput"
+        android:layout_marginTop="2dp"
+        android:text="Forgot Password?"
+        android:textColor="#707070"
+        android:textSize="14sp"
+        android:fontFamily="@font/inter"/>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/forgotPassword"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginLeft="45dp"
+        android:backgroundTint="@color/button"
+        android:text="Register"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        app:cornerRadius="8dp"/>
+
+    <!-- Or Login With Divider -->
+    <TextView
+        android:id="@+id/choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Or Register With"
+        android:textColor="#707070"
+        android:textSize="14sp"
+        android:fontFamily="@font/inter"/>
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/loginButton"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:background="#707070" />
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/loginButton"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="20dp"
+        android:background="#707070" />
+
+
+    <!-- Social Login Icons -->
+    <LinearLayout
+        android:id="@+id/socialLoginIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/google"
+                android:background="@drawable/bg"
+                android:padding="10dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/facebook"
+                android:background="@drawable/bg"
+                android:padding="10dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pnj"
+                android:background="@drawable/bg"
+                android:padding="10dp"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <!-- Register Link -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/socialLoginIcons"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:text="Have An Account?"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/loginNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/socialLoginIcons"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="220dp"
+        android:text="Login Now"
+        android:textColor="#005CB2"
+        android:textSize="14sp" />
+
+</RelativeLayout>

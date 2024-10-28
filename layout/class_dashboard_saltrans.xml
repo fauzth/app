@@ -1,0 +1,392 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#165D96">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/circle_shape_white"
+                android:src="@drawable/baseline_keyboard_backspace_24" />
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/searchbar"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:fontFamily="@font/inter"
+            android:hint="Search"
+            android:paddingStart="15dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchBar"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:text="Sistem Transmisi"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/inter2" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleText"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="30dp"
+            android:text="Course Detail"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/inter" />
+    </RelativeLayout>
+
+    <!-- Lessons Title -->
+    <TextView
+        android:id="@+id/lessonsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="140dp"
+        android:text="Lessons"
+        android:textSize="30sp"
+        android:textColor="@color/button"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter2"
+        android:gravity="center"/>
+
+    <!-- Scrollable Lesson List -->
+    <ScrollView
+        android:id="@+id/lessonScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/lessonsTitle"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- BAB PERTAMA -->
+            <RelativeLayout
+                android:id="@+id/container1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_lesson"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/lessonSubtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Persamaan Arus dan Tegangan"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+
+                <TextView
+                    android:id="@+id/detail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lessonSubtitle1"
+                    android:layout_marginTop="4dp"
+                    android:text="Pertemuan 1"
+                    android:textSize="12sp"
+                    android:textColor="#D0D0D0"
+                    android:fontFamily="@font/inter" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:progress="50"
+                    android:progressTint="@color/button"
+                    android:progressDrawable="@drawable/progres_bar"
+                    style="@android:style/Widget.ProgressBar.Horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="51%"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+            </RelativeLayout>
+            <!-- End of lesson block -->
+
+            <!-- BAB KEDUA -->
+            <RelativeLayout
+                android:id="@+id/container2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_lesson"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/lessonSubtitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saluran Transmisi"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+
+                <TextView
+                    android:id="@+id/detail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lessonSubtitle2"
+                    android:layout_marginTop="4dp"
+                    android:text="Pertemuan 2"
+                    android:textSize="12sp"
+                    android:textColor="#D0D0D0"
+                    android:fontFamily="@font/inter" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:progress="30"
+                    android:progressTint="@color/button"
+                    android:progressDrawable="@drawable/progres_bar"
+                    style="@android:style/Widget.ProgressBar.Horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="30%"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+            </RelativeLayout>
+            <!-- End of lesson block -->
+
+            <!-- BAB KETIGA -->
+            <RelativeLayout
+                android:id="@+id/container3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_lesson"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/lessonSubtitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refleksi dan Faktor Refleksi"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+
+                <TextView
+                    android:id="@+id/detail3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lessonSubtitle3"
+                    android:layout_marginTop="4dp"
+                    android:text="Pertemuan 3"
+                    android:textSize="12sp"
+                    android:textColor="#D0D0D0"
+                    android:fontFamily="@font/inter" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:progress="40"
+                    android:progressTint="@color/button"
+                    android:progressDrawable="@drawable/progres_bar"
+                    style="@android:style/Widget.ProgressBar.Horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="40%"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+            </RelativeLayout>
+            <!-- End of lesson block -->
+
+            <!-- BAB KEEMPAT -->
+            <RelativeLayout
+                android:id="@+id/container4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_lesson"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/lessonSubtitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Smith Chart"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+
+                <TextView
+                    android:id="@+id/detail4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lessonSubtitle4"
+                    android:layout_marginTop="4dp"
+                    android:text="Pertemuan 4"
+                    android:textSize="12sp"
+                    android:textColor="#D0D0D0"
+                    android:fontFamily="@font/inter" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:progress="0"
+                    android:progressTint="@color/button"
+                    android:progressDrawable="@drawable/progres_bar"
+                    style="@android:style/Widget.ProgressBar.Horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="0%"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+            </RelativeLayout>
+            <!-- End of lesson block -->
+
+            <!-- BAB KEEMPAT -->
+            <RelativeLayout
+                android:id="@+id/container5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_lesson"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/lessonSubtitle5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Impedansi"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+
+                <TextView
+                    android:id="@+id/detail5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lessonSubtitle5"
+                    android:layout_marginTop="4dp"
+                    android:text="Pertemuan 5"
+                    android:textSize="12sp"
+                    android:textColor="#D0D0D0"
+                    android:fontFamily="@font/inter" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:progress="0"
+                    android:progressTint="@color/button"
+                    android:progressDrawable="@drawable/progres_bar"
+                    style="@android:style/Widget.ProgressBar.Horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail5"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="4dp"
+                    android:text="0%"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+            </RelativeLayout>
+            <!-- End of lesson block -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bottomnav"
+        android:gravity="center">
+
+        <!-- Ikon navigasi di sini -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_home_24" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_file_download_24"
+            android:layout_marginStart="50dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_group_24"
+            android:layout_marginStart="50dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_format_list_bulleted_24"
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

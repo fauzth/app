@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+
+    <!-- ScrollView untuk memungkinkan scrolling -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation">
+
+        <!-- Konten di dalam ScrollView -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header -->
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="#165D96">
+
+                <!-- Back Button -->
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@drawable/circle_shape_white"
+                    android:src="@drawable/baseline_keyboard_backspace_24" />
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="80dp"
+                    android:text="Sub Lesson Title"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter2" />
+
+                <!-- Subtitle -->
+                <TextView
+                    android:id="@+id/subtitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleText"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="80dp"
+                    android:text="Sub Lesson Detail"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/inter" />
+            </RelativeLayout>
+
+            <!-- Lessons Title -->
+            <TextView
+                android:id="@+id/lessonsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="30dp"
+                android:text="Introduction"
+                android:textSize="30sp"
+                android:textColor="@color/button"
+                android:fontFamily="@font/inter2"
+                android:gravity="center" />
+
+            <!-- Detail Intro -->
+            <TextView
+                android:id="@+id/DetailIntro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lessonsTitle"
+                android:layout_marginStart="30dp"
+                android:text="lorem \nlorem \nipsum \nlorem \nipsum" />
+
+            <!-- Video -->
+            <VideoView
+                android:id="@+id/Video"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/DetailIntro"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="60dp" />
+
+            <!-- Summary Title -->
+            <TextView
+                android:id="@+id/Summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Video"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="30dp"
+                android:text="Summary"
+                android:textSize="30sp"
+                android:textColor="@color/button"
+                android:fontFamily="@font/inter2"
+                android:gravity="center" />
+
+            <!-- Detail Summary -->
+            <TextView
+                android:id="@+id/DetailSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Summary"
+                android:layout_marginStart="30dp"
+                android:text="lorem \nlorem \nipsum \nlorem \nipsum" />
+
+            <!-- Download Button -->
+            <Button
+                android:id="@+id/downloadBtn"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/button"
+                android:layout_below="@+id/DetailSummary"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="95dp"
+                android:text="Download Lesson"
+                android:drawableRight="@drawable/baseline_download_24"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bottomnav"
+        android:gravity="center">
+
+        <!-- Ikon navigasi di sini -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_home_24" />
+
+        <ImageView
+            android:id="@id/viewDownload"
+            android:layout_width="40dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/baseline_file_download_24" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_group_24"
+            android:layout_marginStart="50dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_format_list_bulleted_24"
+            android:layout_marginStart="50dp" />
+    </LinearLayout>
+
+</RelativeLayout>

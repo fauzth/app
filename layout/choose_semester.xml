@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF1F9">
+
+    <View
+        android:id="@+id/circleTopLeft"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/circle_shape_blue" />
+
+    <View
+        android:id="@+id/smallCircleTop"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_shape_blue" />
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="86dp"
+        android:background="@drawable/circle_shape_blue" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginStart="300dp"
+        android:background="@drawable/circle_shape_blue" />
+
+    <!-- Kotak Card untuk tombol -->
+    <RelativeLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_card"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter2"
+            android:text="Ready to learn?"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/subText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleText"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter"
+            android:text="Choose your plan!"
+            android:textColor="#FFFF"
+            android:textSize="14sp" />
+
+        <!-- Tombol Grade 1 dan Grade 2 -->
+        <Button
+            android:id="@+id/grade1Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subText"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/inter"
+            android:text="Grade 1"
+            android:textColor="#165D96" />
+
+        <Button
+            android:id="@+id/grade2Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subText"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/inter"
+            android:text="Grade 2"
+            android:textColor="#165D96" />
+
+        <!-- Tombol Grade 3 dan Grade 4 -->
+        <Button
+            android:id="@+id/grade3Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grade1Button"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/inter"
+            android:text="Grade 3"
+            android:textColor="#165D96" />
+
+        <Button
+            android:id="@+id/grade4Button"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grade2Button"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Grade 4"
+            android:textColor="#165D96" />
+    </RelativeLayout>
+
+    <!-- Elemen lingkaran bawah kanan -->
+    <View
+        android:id="@+id/circleBottomRight"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-80dp"
+        android:layout_marginBottom="-70dp"
+        android:background="@drawable/circle_shape_blue" />
+
+    <View
+        android:id="@+id/smallCircleEnd"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/circle_shape_blue" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="630dp"
+        android:layout_marginStart="70dp"
+        android:background="@drawable/circle_shape_blue" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="660dp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/circle_shape_blue" />
+</RelativeLayout>

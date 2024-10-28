@@ -1,0 +1,129 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#165D96">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/circle_shape_white"
+            android:src="@drawable/baseline_keyboard_backspace_24" />
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/searchbar"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:fontFamily="@font/inter"
+            android:hint="Search"
+            android:paddingStart="15dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchBar"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:text="Downloaded Leasons"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/inter2" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleText"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="30dp"
+            android:text="Course Detail"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/inter" />
+    </RelativeLayout>
+
+    <!-- Lessons Title -->
+    <TextView
+        android:id="@+id/lessonsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="140dp"
+        android:text="Lessons"
+        android:textSize="30sp"
+        android:textColor="@color/button"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter2"
+        android:gravity="center"/>
+
+    <!-- Scrollable Lesson List -->
+    <ScrollView
+        android:id="@+id/lessonScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/lessonsTitle"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_marginTop="16dp">
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bottomnav"
+        android:gravity="center">
+
+        <!-- Ikon navigasi di sini -->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/viewDownload"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/baseline_file_download_24" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_group_24"
+            android:layout_marginStart="50dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_format_list_bulleted_24"
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
+
